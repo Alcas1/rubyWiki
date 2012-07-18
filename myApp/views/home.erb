@@ -1,0 +1,15 @@
+<form action="/" method="post">
+  <input type="submit" value="New Wiki">
+</form>
+
+<% @wikis.each do |wiki| %>
+    <article>
+      <p>
+        <span><a href="/<%= wiki.id %>">[edit]</a></span>
+      </p>
+      <p class="links">
+        <a href="/<%= wiki.id %>/complete">&#8623;</a>
+      </p>
+      <p class="meta">Created: <%= wiki.created_at %></p>
+    </article>
+<% end %>

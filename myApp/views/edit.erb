@@ -1,0 +1,11 @@
+<% if @wiki %>
+    <form action="/<%= @wiki.id %>" method="post" id="edit">
+      <input type="hidden" name="_method" value="put">
+      <textarea name="content"><%= @wiki.page_content %></textarea>
+      <input type="checkbox" name="complete" <%= "checked" if @wiki.uneditable %>>
+      <input type="submit">
+    </form>
+    <p><a href="/<%= @wiki.id %>/delete">Delete</a></p>
+<% else %>
+    <p>Note not found.</p>
+<% end %>

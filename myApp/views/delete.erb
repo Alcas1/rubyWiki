@@ -1,0 +1,10 @@
+<%= if @wiki %>
+    <p>Are you sure you want to delete the following note: <em>"<%= @wiki.page_content %>"</em>?</p>
+    <form action="/<%= @wiki.id %>" method="post">
+      <input type="hidden" name="_method" value="delete">
+      <input type="submit" value="Yes, Delete It!">
+      <a href="/<%= @wiki.id %>">Cancel</a>
+    </form>
+<%= else %>
+    <p>Note not found.</p>
+<%= end %>

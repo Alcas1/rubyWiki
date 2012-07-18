@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf8">
+  <title><%= @title + ' Wiki' %></title>
+  <link href="reset.css" rel="stylesheet" type="text/css">
+  <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<header>
+  <hgroup>
+    <h1><a href="/">Wiki</a></h1>
+    <h2>Jon's Wiki Page</h2>
+  </hgroup>
+</header>
+
+<div id="main">
+  <%= yield %>
+</div>
+
+<footer>
+  <p><small>An app for <a href="jonwu8thlight.blogspot.com">Jonathan Wu</a></small></p>
+</footer>
+</body>
+</html>
